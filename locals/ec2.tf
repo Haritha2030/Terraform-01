@@ -8,7 +8,7 @@ resource "aws_instance" "expense" {
   }
 }
 
-resource "aws_security_group" "allow_ssh_terraform" {
+resource "aws_security_group" "allow_sshh_terraform" {
   name        = "allow_sshhh" #allow_ssh is already there in my account
   description = "Allow port number 22 for SSH access"
 
@@ -38,7 +38,7 @@ resource "aws_security_group" "allow_ssh_terraform" {
 resource "aws_instance" "elastcsearch" {
     ami = data.aws_ami.ami_info.id
     instance_type = local.instance_type
-    vpc_security_group_ids = [aws_security_group.allow_ssh_terraform.id]
+    vpc_security_group_ids = [aws_security_group.allow_sshh_terraform.id]
      tags = {
          Name = "Terraform"
     }

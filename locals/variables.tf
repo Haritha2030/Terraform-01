@@ -12,6 +12,6 @@ variable "instance_names" {
 #   default = "haritha.shop"
 # }
 variable "environment" {
-  default = prod
+  default = "prod"
   
 }
